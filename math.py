@@ -30,3 +30,11 @@ def kgV(a, b):
         i += 1
         x = a * i
     return x
+
+
+def find_prime_factor(a):
+    p = 2
+    while True:
+        if is_prime(p) and a % p == 0:
+            return p
+        p += 1

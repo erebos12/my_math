@@ -101,3 +101,22 @@ class TestMath(unittest.TestCase):
 
         kgV = math.kgV(144, 11)
         self.assertEqual(1584, kgV)
+
+    def test_find_prime_factor(self):
+        prime_factor = math.find_prime_factor(15)
+        self.assertEqual(3, prime_factor)
+
+        prime_factor = math.find_prime_factor(8)
+        self.assertEqual(2, prime_factor)
+
+        prime_factor = math.find_prime_factor(11)
+        self.assertEqual(11, prime_factor)
+
+        prime_factor = math.find_prime_factor(17)
+        self.assertEqual(17, prime_factor)
+
+        prime_factor = math.find_prime_factor(16)
+        self.assertEqual(2, prime_factor)
+
+        prime_factor = math.find_prime_factor(30)
+        self.assertEqual(2, prime_factor)
