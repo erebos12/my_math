@@ -20,6 +20,19 @@ class TestMath(unittest.TestCase):
         factor_list = math.factor_quantity(2)
         self.assertListEqual([1, 2], factor_list)
 
+    def test_is_prime(self):
+        is_prime = math.is_prime(2)
+        self.assertTrue(is_prime)
+
+        is_prime = math.is_prime(3)
+        self.assertTrue(is_prime)
+
+        is_prime = math.is_prime(4)
+        self.assertFalse(is_prime)
+
+        is_prime = math.is_prime(5)
+        self.assertTrue(is_prime)
+
 
 
 
