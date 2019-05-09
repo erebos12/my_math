@@ -33,7 +33,18 @@ class TestMath(unittest.TestCase):
         is_prime = math.is_prime(5)
         self.assertTrue(is_prime)
 
+    def test_intersection(self):
+        intersection = math.intersection([1,2,3], [1,2,3])
+        self.assertListEqual([1,2,3], intersection)
 
+        intersection = math.intersection([1, 2, 3], [1, 2, 34])
+        self.assertListEqual([1, 2], intersection)
+
+        intersection = math.intersection([2, 3], [1, 2, 34])
+        self.assertListEqual([2], intersection)
+
+        intersection = math.intersection([1, 3], [2, 34])
+        self.assertListEqual([], intersection)
 
 
 
