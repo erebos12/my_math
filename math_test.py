@@ -14,6 +14,13 @@ class TestMath(unittest.TestCase):
         factor_list = math.factor_quantity(12)
         self.assertListEqual([1, 2, 3, 4, 6, 12], factor_list)
 
+        factor_list = math.factor_quantity(1)
+        self.assertListEqual([1], factor_list)
+
+        factor_list = math.factor_quantity(2)
+        self.assertListEqual([1, 2], factor_list)
+
+
 
 
 
