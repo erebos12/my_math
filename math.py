@@ -1,4 +1,4 @@
-def factor_quantity(a):
+def divisors_quantity(a):
     if a == 1:
         return [1]
     factor_list = [1, a]
@@ -9,7 +9,7 @@ def factor_quantity(a):
 
 
 def is_prime(a):
-    return len(factor_quantity(a)) == 2
+    return len(divisors_quantity(a)) == 2
 
 
 def intersection(lst1, lst2):
@@ -17,7 +17,7 @@ def intersection(lst1, lst2):
 
 
 def ggT(a, b):
-    factor_list_a = factor_quantity(a)
-    factor_list_b = factor_quantity(b)
+    factor_list_a = divisors_quantity(a)
+    factor_list_b = divisors_quantity(b)
     intersect = intersection(factor_list_a, factor_list_b)
     return max(intersect)
