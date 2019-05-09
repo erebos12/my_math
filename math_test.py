@@ -120,3 +120,16 @@ class TestMath(unittest.TestCase):
 
         prime_factor = math.find_prime_factor(30)
         self.assertEqual(2, prime_factor)
+
+    def test_prime_factorization(self):
+        prime_factor_list = math.prime_factorization(30)
+        self.assertEqual([2, 3, 5], prime_factor_list)
+
+        prime_factor_list = math.prime_factorization(120)
+        self.assertEqual([2, 2, 2, 3, 5], prime_factor_list)
+
+        prime_factor_list = math.prime_factorization(12)
+        self.assertEqual([2, 2, 3], prime_factor_list)
+
+        prime_factor_list = math.prime_factorization(1200)
+        self.assertEqual([2, 2, 2, 2, 3, 5, 5], prime_factor_list)

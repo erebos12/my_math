@@ -38,3 +38,16 @@ def find_prime_factor(a):
         if is_prime(p) and a % p == 0:
             return p
         p += 1
+
+
+def prime_factorization(a):
+    pf_list = []
+    x = a
+    while True:
+        prime_factor = find_prime_factor(x)
+        if prime_factor:
+            pf_list.append(prime_factor)
+            x = (x / prime_factor)
+        if x == 1:
+            break
+    return pf_list
