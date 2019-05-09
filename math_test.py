@@ -1,6 +1,6 @@
-
 import unittest
 import math
+
 
 class TestMath(unittest.TestCase):
 
@@ -21,6 +21,9 @@ class TestMath(unittest.TestCase):
         self.assertListEqual([1, 2], factor_list)
 
     def test_is_prime(self):
+        is_prime = math.is_prime(1)
+        self.assertFalse(is_prime)
+
         is_prime = math.is_prime(2)
         self.assertTrue(is_prime)
 
@@ -33,9 +36,12 @@ class TestMath(unittest.TestCase):
         is_prime = math.is_prime(5)
         self.assertTrue(is_prime)
 
+        is_prime = math.is_prime(9)
+        self.assertFalse(is_prime)
+
     def test_intersection(self):
-        intersection = math.intersection([1,2,3], [1,2,3])
-        self.assertListEqual([1,2,3], intersection)
+        intersection = math.intersection([1, 2, 3], [1, 2, 3])
+        self.assertListEqual([1, 2, 3], intersection)
 
         intersection = math.intersection([1, 2, 3], [1, 2, 34])
         self.assertListEqual([1, 2], intersection)
@@ -45,7 +51,3 @@ class TestMath(unittest.TestCase):
 
         intersection = math.intersection([1, 3], [2, 34])
         self.assertListEqual([], intersection)
-
-
-
-
