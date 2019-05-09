@@ -21,3 +21,12 @@ def ggT(a, b):
     factor_list_b = divisors_quantity(b)
     intersect = intersection(factor_list_a, factor_list_b)
     return max(intersect)
+
+
+def kgV(a, b):
+    i = 1
+    x = a * 1
+    while x % b != 0:
+        i += 1
+        x = a * i
+    return x

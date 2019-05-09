@@ -73,3 +73,28 @@ class TestMath(unittest.TestCase):
 
         ggT = math.ggT(1, 1)
         self.assertEqual(1, ggT)
+
+    def test_kgV(self):
+        kgV = math.kgV(3, 4)
+        self.assertEqual(12, kgV)
+
+        kgV = math.kgV(9, 30)
+        self.assertEqual(90, kgV)
+
+        kgV = math.kgV(30, 9)
+        self.assertEqual(90, kgV)
+
+        kgV = math.kgV(1, 1)
+        self.assertEqual(1, kgV)
+
+        kgV = math.kgV(2, 8)
+        self.assertEqual(8, kgV)
+
+        kgV = math.kgV(5, 6)
+        self.assertEqual(30, kgV)
+
+        kgV = math.kgV(11, 144)
+        self.assertEqual(1584, kgV)
+
+        kgV = math.kgV(144, 11)
+        self.assertEqual(1584, kgV)
