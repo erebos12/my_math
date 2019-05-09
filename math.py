@@ -14,3 +14,10 @@ def is_prime(a):
 
 def intersection(lst1, lst2):
     return list(set(lst1) & set(lst2))
+
+
+def ggT(a, b):
+    factor_list_a = factor_quantity(a)
+    factor_list_b = factor_quantity(b)
+    intersect = intersection(factor_list_a, factor_list_b)
+    return max(intersect)

@@ -51,3 +51,25 @@ class TestMath(unittest.TestCase):
 
         intersection = math.intersection([1, 3], [2, 34])
         self.assertListEqual([], intersection)
+
+    def test_ggT(self):
+        ggT = math.ggT(20, 30)
+        self.assertEqual(10, ggT)
+
+        ggT = math.ggT(2, 2)
+        self.assertEqual(2, ggT)
+
+        ggT = math.ggT(9, 12)
+        self.assertEqual(3, ggT)
+
+        ggT = math.ggT(99, 44)
+        self.assertEqual(11, ggT)
+
+        ggT = math.ggT(3, 18)
+        self.assertEqual(3, ggT)
+
+        ggT = math.ggT(30, 180)
+        self.assertEqual(30, ggT)
+
+        ggT = math.ggT(1, 1)
+        self.assertEqual(1, ggT)
