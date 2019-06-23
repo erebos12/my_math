@@ -134,3 +134,17 @@ class TestMath(unittest.TestCase):
 
         prime_factor_list = math.prime_factorization(1200)
         self.assertEqual([2, 2, 2, 2, 3, 5, 5], prime_factor_list)
+
+    def test_sigma(self):
+        res = math.sigma(4, 27, "4*(pow(0.5, i))")
+        self.assertEqual(0.4999999701976776, res)
+
+        res = math.sigma(5, 9, "pow(i, 2) - i")
+        self.assertEqual(220, res)
+
+        res = math.sigma(2, 4, "pow(i, 2)")
+        self.assertEqual(29, res)
+
+        res = math.sigma(0, 2, "i")
+        self.assertEqual(3, res)
+

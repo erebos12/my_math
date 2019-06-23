@@ -51,3 +51,10 @@ def prime_factorization(a):
         if x == 1:
             break
     return pf_list
+
+
+def sigma(start, end, term):
+    res = 0
+    for i in range(start, end+1):
+        res += eval(term)
+    return res
