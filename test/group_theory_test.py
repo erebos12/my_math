@@ -3,7 +3,7 @@ import unittest
 import group_theory
 
 
-class TestGroupTheaory(unittest.TestCase):
+class TestGroupTheory(unittest.TestCase):
 
     def test_is_integer(self):
         self.assertTrue(group_theory.is_integer(2))

@@ -1,7 +1,5 @@
-import unittest
-
-import math
-
+import unittest, math
+from math import sigma
 
 class TestMath(unittest.TestCase):
 
@@ -136,72 +134,71 @@ class TestMath(unittest.TestCase):
         self.assertEqual([2, 2, 2, 2, 3, 5, 5], prime_factor_list)
 
     def test_sigma(self):
-        res = math.sigma(4, 27, "4*(pow(0.5, i))")
+        res = sigma(4, 27, "4*(pow(0.5, i))")
         self.assertEqual(0.4999999701976776, res)
 
-        res = math.sigma(5, 9, "pow(i, 2) - i")
+        res = sigma(5, 9, "pow(i, 2) - i")
         self.assertEqual(220, res)
 
-        res = math.sigma(2, 4, "pow(i, 2)")
+        res = sigma(2, 4, "pow(i, 2)")
         self.assertEqual(29, res)
 
-        res = math.sigma(0, 2, "i")
+        res = sigma(0, 2, "i")
         self.assertEqual(3, res)
 
-        res = math.sigma(2, 8, "i+6")
+        res = sigma(2, 8, "i+6")
         self.assertEqual(77, res)
 
-        res = math.sigma(4, 10, "i+4")
+        res = sigma(4, 10, "i+4")
         self.assertEqual(77, res)
 
-        res = math.sigma(1, 3, "-i")
+        res = sigma(1, 3, "-i")
         self.assertEqual(-6, res)
 
-        res = math.sigma(5, 10, "8-i")
+        res = sigma(5, 10, "8-i")
         self.assertEqual(3, res)
 
-        res = math.sigma(1, 6, "4-i")
+        res = sigma(1, 6, "4-i")
         self.assertEqual(3, res)
 
-        res = math.sigma(1, 6, "8")
+        res = sigma(1, 6, "8")
         self.assertEqual(48, res)
 
-        res = math.sigma(1, 6, "i+4")
+        res = sigma(1, 6, "i+4")
         self.assertEqual(45, res)
 
-        res = math.sigma(2, 8, "3-i")
+        res = sigma(2, 8, "3-i")
         self.assertEqual(-14, res)
 
-        res = math.sigma(0, 6, "-i+5")
-        self.assertEqual(14, res)
+        res = sigma(0, 6, "1-i")
+        self.assertEqual(-14, res)
 
-        res = math.sigma(6, 10, "i-1")
+        res = sigma(6, 10, "i-1")
         self.assertEqual(35, res)
 
-        res = math.sigma(1, 5, "i+4")
+        res = sigma(1, 5, "i+4")
         self.assertEqual(35, res)
 
-        res = math.sigma(3, 15, "2*i+3")
+        res = sigma(3, 15, "2*i+3")
         self.assertEqual(273, res)
 
-        res = math.sigma(1, 13, "2*i+7")
+        res = sigma(1, 13, "2*i+7")
         self.assertEqual(273, res)
 
-        res = math.sigma(4, 10, "pow(i,2)-2")
+        res = sigma(4, 10, "pow(i,2)-2")
         self.assertEqual(357, res)
 
-        res = math.sigma(1, 7, "pow(i,2)+6*i+7")
+        res = sigma(1, 7, "pow(i,2)+6*i+7")
         self.assertEqual(357, res)
 
-        res = math.sigma(5, 20, "pow(i,2)+2*i")
+        res = sigma(5, 20, "pow(i,2)+2*i")
         self.assertEqual(3240, res)
 
-        res = math.sigma(2, 17, "pow(i,2)+8*i+15")
+        res = sigma(2, 17, "pow(i,2)+8*i+15")
         self.assertEqual(3240, res)
 
-        res = math.sigma(4, 10, "4*i-3")
+        res = sigma(4, 10, "4*i-3")
         self.assertEqual(175, res)
 
-        res = math.sigma(1, 7, "4*i+9")
+        res = sigma(1, 7, "4*i+9")
         self.assertEqual(175, res)
-
