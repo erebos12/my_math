@@ -169,5 +169,39 @@ class TestMath(unittest.TestCase):
         res = math.sigma(1, 6, "i+4")
         self.assertEqual(45, res)
 
+        res = math.sigma(2, 8, "3-i")
+        self.assertEqual(-14, res)
 
+        res = math.sigma(0, 6, "-i+5")
+        self.assertEqual(14, res)
+
+        res = math.sigma(6, 10, "i-1")
+        self.assertEqual(35, res)
+
+        res = math.sigma(1, 5, "i+4")
+        self.assertEqual(35, res)
+
+        res = math.sigma(3, 15, "2*i+3")
+        self.assertEqual(273, res)
+
+        res = math.sigma(1, 13, "2*i+7")
+        self.assertEqual(273, res)
+
+        res = math.sigma(4, 10, "pow(i,2)-2")
+        self.assertEqual(357, res)
+
+        res = math.sigma(1, 7, "pow(i,2)+6*i+7")
+        self.assertEqual(357, res)
+
+        res = math.sigma(5, 20, "pow(i,2)+2*i")
+        self.assertEqual(3240, res)
+
+        res = math.sigma(2, 17, "pow(i,2)+8*i+15")
+        self.assertEqual(3240, res)
+
+        res = math.sigma(4, 10, "4*i-3")
+        self.assertEqual(175, res)
+
+        res = math.sigma(1, 7, "4*i+9")
+        self.assertEqual(175, res)
 
