@@ -202,3 +202,12 @@ class TestMath(unittest.TestCase):
 
         res = sigma(1, 7, "4*i+9")
         self.assertEqual(175, res)
+
+        res = sigma(6, 15, "2*pow(i,2)-4*i+2")
+        self.assertEqual(1970, res)
+
+        res = sigma(5, 10, "6*i+2")
+        self.assertEqual(282, res)
+
+        res = sigma(0, 5, "6*i+32")
+        self.assertEqual(282, res)
